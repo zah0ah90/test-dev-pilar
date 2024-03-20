@@ -81,14 +81,14 @@
         var csrfHash = $('.txt_csrfname').val();
         $(document).ready(function() {
             // alert(hash)
-            financialHightlight()
+
             if (hash == 'tabHighlights') {
                 financialHightlight()
             } else if (hash == 'tabStatements') {
                 financialStetment()
             } else {
                 // null
-                null
+                financialHightlight()
             }
         });
 
