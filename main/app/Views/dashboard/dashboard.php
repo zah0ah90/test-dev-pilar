@@ -77,8 +77,7 @@
 
     <script>
         var hash = document.URL.substr(document.URL.indexOf('#') + 1);
-        var csrfName = $('.txt_csrfname').attr('name');
-        var csrfHash = $('.txt_csrfname').val();
+
         $(document).ready(function() {
             // alert(hash)
 
@@ -94,9 +93,11 @@
 
 
         function financialHightlight() {
+            var csrfName = $('.txt_csrfname').attr('name');
+            var csrfHash = $('.txt_csrfname').val();
             $('.financialStetment').addClass('text-underline-hover');
             $('.financialHightlight').removeClass('text-underline-hover');
-            $('#contentBody').html('financialHightlight');
+            // $('#contentBody').html('financialHightlight');
             $.ajax({
                 url: "<?= base_url('dashboard/financialHightlight') ?>",
                 method: "POST",
