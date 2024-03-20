@@ -11,7 +11,7 @@
  Target Server Version : 80030 (8.0.30)
  File Encoding         : 65001
 
- Date: 20/03/2024 15:54:59
+ Date: 20/03/2024 16:20:15
 */
 
 SET NAMES utf8mb4;
@@ -141,6 +141,7 @@ CREATE TABLE `tbl_stetment`  (
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `date` date NULL DEFAULT NULL,
   `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `adddate` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
@@ -148,25 +149,25 @@ CREATE TABLE `tbl_stetment`  (
 -- ----------------------------
 -- Records of tbl_stetment
 -- ----------------------------
-INSERT INTO `tbl_stetment` VALUES (1, 'FINANCIAL STATEMENTS ', '2023-12-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (2, 'FINANCIAL STATEMENTS ', '2023-09-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (3, 'FINANCIAL STATEMENTS ', '2023-06-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (4, 'FINANCIAL STATEMENTS ', '2023-03-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (5, 'FINANCIAL STATEMENTS ', '2022-12-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (6, 'FINANCIAL STATEMENTS ', '2022-09-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (7, 'FINANCIAL STATEMENTS ', '2022-06-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (8, 'FINANCIAL STATEMENTS ', '2022-03-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (9, 'FINANCIAL STATEMENTS ', '2021-12-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (10, 'FINANCIAL STATEMENTS ', '2021-09-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (11, 'FINANCIAL STATEMENTS ', '2021-06-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (12, 'FINANCIAL STATEMENTS ', '2021-03-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (13, 'FINANCIAL STATEMENTS ', '2020-12-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (14, 'FINANCIAL STATEMENTS ', '2020-09-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (15, 'FINANCIAL STATEMENTS ', '2020-06-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (16, 'FINANCIAL STATEMENTS ', '2020-03-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (17, 'FINANCIAL STATEMENTS ', '2019-12-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (18, 'FINANCIAL STATEMENTS ', '2019-09-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (19, 'FINANCIAL STATEMENTS ', '2019-06-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
-INSERT INTO `tbl_stetment` VALUES (20, 'FINANCIAL STATEMENTS ', '2019-03-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', NULL);
+INSERT INTO `tbl_stetment` VALUES (1, 'FINANCIAL STATEMENTS ', '2023-12-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (2, 'FINANCIAL STATEMENTS ', '2023-09-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (3, 'FINANCIAL STATEMENTS ', '2023-06-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (4, 'FINANCIAL STATEMENTS ', '2023-03-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (5, 'FINANCIAL STATEMENTS ', '2022-12-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (6, 'FINANCIAL STATEMENTS ', '2022-09-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (7, 'FINANCIAL STATEMENTS ', '2022-06-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (8, 'FINANCIAL STATEMENTS ', '2022-03-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (9, 'FINANCIAL STATEMENTS ', '2021-12-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (10, 'FINANCIAL STATEMENTS ', '2021-09-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (11, 'FINANCIAL STATEMENTS ', '2021-06-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (12, 'FINANCIAL STATEMENTS ', '2021-03-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (13, 'FINANCIAL STATEMENTS ', '2020-12-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (14, 'FINANCIAL STATEMENTS ', '2020-09-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (15, 'FINANCIAL STATEMENTS ', '2020-06-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (16, 'FINANCIAL STATEMENTS ', '2020-03-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (17, 'FINANCIAL STATEMENTS ', '2019-12-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (18, 'FINANCIAL STATEMENTS ', '2019-09-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (19, 'FINANCIAL STATEMENTS ', '2019-06-30', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
+INSERT INTO `tbl_stetment` VALUES (20, 'FINANCIAL STATEMENTS ', '2019-03-31', 'https://www.listrindo.com/uploads/financial_statement/pri_1709225695_fb44e98c73db9efdba852258a2f15524.jpg', 'https://www.listrindo.com/uploads/financial_statement/file_1709225695_1709225765__fb44e98c73db9efdba852258a2f15524.pdf', NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;
