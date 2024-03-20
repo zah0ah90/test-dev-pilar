@@ -80,15 +80,23 @@ class Dashboard extends BaseController
                 'dividendYield' => $dividendYield,
             ];
 
-            // echo '<pre>';
-            // print_r($paramsView);
-            // die();
-
-
-
-
             $data['token'] = csrf_hash();
             $data['view'] = view('dashboard/finance_hightlight', $paramsView);
+            return $this->response->setJSON($data);
+        } else {
+            return redirect()->to('dashboard');
+        }
+    }
+
+    function financialStetment()
+    {
+        if ($this->request->isAJAX()) {
+            $data['token'] = csrf_hash();
+            $paramsView = [
+                'getYear' => $this->Allmodel->getYearStetment(),
+                'Allmodel' => $this->Allmodel
+            ];
+            $data['view'] = view('dashboard/finance_statment', $paramsView);
             return $this->response->setJSON($data);
         } else {
             return redirect()->to('dashboard');

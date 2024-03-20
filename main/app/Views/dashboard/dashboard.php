@@ -98,6 +98,7 @@
             $('.financialStetment').addClass('text-underline-hover');
             $('.financialHightlight').removeClass('text-underline-hover');
             // $('#contentBody').html('financialHightlight');
+            $('#contentBody').html('')
             $.ajax({
                 url: "<?= base_url('dashboard/financialHightlight') ?>",
                 method: "POST",
@@ -116,9 +117,24 @@
 
 
         function financialStetment() {
+            var csrfName = $('.txt_csrfname').attr('name');
+            var csrfHash = $('.txt_csrfname').val();
             $('.financialHightlight').addClass('text-underline-hover');
             $('.financialStetment').removeClass('text-underline-hover');
-            $('#contentBody').html('Maintance');
+            $('#contentBody').html('')
+            $.ajax({
+                url: "<?= base_url('dashboard/financialStetment') ?>",
+                method: "POST",
+                dataType: 'json',
+                data: {
+                    [csrfName]: csrfHash
+                },
+                success: function(data) {
+                    console.log(data);
+                    $.when($('.txt_csrfname').val(data.token)).then($('#contentBody').html(data.view))
+
+                },
+            });
         }
     </script>
 </body>

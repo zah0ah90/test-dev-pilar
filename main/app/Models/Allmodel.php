@@ -130,7 +130,7 @@ class Allmodel extends Model
             tbl_finance a 
         WHERE a.category=$params
         GROUP BY
-            a.name, a.symbol;
+            a.name, a.symbol
         ";
 
         return $this->db->query($query)->getResultArray();
@@ -144,7 +144,15 @@ class Allmodel extends Model
 		EXTRACT(YEAR FROM a.date) as date,
 		(SELECT b.amount FROM tbl_finance b WHERE  b.subname='IE' AND  YEAR(b.date)=YEAR(a.date)  ) as amount_ie,
 		(SELECT b.amount FROM tbl_finance b WHERE  b.subname='PLN' AND  YEAR(b.date)=YEAR(a.date)  ) as amount_pln
-		 FROM tbl_finance a WHERE subname is not null and category=1 order by subname asc, date asc ;
+		 FROM tbl_finance a WHERE subname is not null and category=1 order by subname asc, date asc 
+        ";
+        return $this->db->query($query)->getResultArray();
+    }
+
+    function getYearStetment()
+    {
+        $query = "
+            SELECT EXTRACT(YEAR FROM date) as date FROM `tbl_stetment` GROUP BY YEAR(date)
         ";
         return $this->db->query($query)->getResultArray();
     }
